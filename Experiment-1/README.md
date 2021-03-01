@@ -79,7 +79,7 @@ plt.show()
     1. 【开始】-->【所有程序】-->【anaconda】-->【Jupyter Notebook】，如果打不开，选择复制链接。
     2. 单击【new】--->“Python 3”，进入Python脚本编辑界面。
 
-7. 编写第一个Python程序
+7. 编写第一个Python程序  
     输入：姓名  
     输出：“我是XX，这是我的第一个Python程序。”
 
