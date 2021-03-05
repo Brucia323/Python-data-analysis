@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import random
+from pylab import mpl
+mpl.rcParams['font.sans-serif'] = ['simhei']
 gradewords = ('优秀', '良好', '中等', '及格', '不及格')
 testwords = [random.choice(gradewords) for i in range(1000)]
 result = dict()
