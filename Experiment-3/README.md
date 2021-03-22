@@ -35,7 +35,7 @@
 
 第1题
 
- ![img](file:./clip_image001.png)
+ ![img](file:/clip_image001.png)
 
  
 
