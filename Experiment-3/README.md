@@ -35,7 +35,7 @@
 
 第1题
 
- ![img](/clip_image001.png)
+ ![](clip_image001.png)
 
  
 
