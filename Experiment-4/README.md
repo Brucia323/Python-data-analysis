@@ -26,6 +26,7 @@
 1. 打开Spyder或Jupyter NoteBook
 2. 新建
 3. 输入  
+
 方法一：  
 ```python
 import seaborn as sns
@@ -45,5 +46,5 @@ url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 iris= np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0,1,2,3]) #获取数据集的前4列
 ```
 后面加上自己的代码。  
-4. 保存
+4. 保存  
 5. 运行
