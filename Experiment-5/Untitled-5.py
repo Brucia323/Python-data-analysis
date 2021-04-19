@@ -7,8 +7,5 @@ YYYYNNMMDDHH = dataT[0]  # YYYY年份，NN序号，MM月份，DD日期，HH小�
 LAT = dataT[1]  # 纬度
 LONG = dataT[2]  # 经度
 SiR34 = dataT[5]  # 尺度
-x = LONG
-y = LAT
-z = SiR34
-plt.scatter(x, y, s=(z-min(z)+0.1), c=z)
+plt.scatter(LONG, LAT, s=(SiR34-min(SiR34)+0.1), c=SiR34)
 plt.show()
