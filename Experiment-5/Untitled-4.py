@@ -16,7 +16,7 @@ plt.bar(index_red1, height=red1, width=bar_width,
 plt.bar(index_black1, height=black1,
         width=bar_width, color='black', label='黑粉')  # 黑粉年龄分布条形图
 plt.legend()  # 图例
-plt.xticks(index_red1+bar_width/2, title1)  # x轴
+plt.xticks(index_red1+bar_width/2, title1)  # x轴刻度
 plt.subplot(222)
 index_red2 = arange(len(title2))  # 红粉性别分布下标
 index_black2 = index_red2+bar_width  # 黑粉性别分布下标
@@ -25,7 +25,7 @@ plt.bar(index_red2, height=red2, width=bar_width,
 plt.bar(index_black2, height=black2,
         width=bar_width, color='black', label='黑粉')  # 黑粉性别分布条形图
 plt.legend()  # 图例
-plt.xticks(index_red2+bar_width/2, title2)  # x轴
+plt.xticks(index_red2+bar_width/2, title2)  # x轴刻度
 plt.subplot(245)
 plt.pie(red1, labels=title1)  # 红粉年龄分布饼图
 plt.title('红粉')
