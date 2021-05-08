@@ -1,0 +1,37 @@
+See, fork, and run a random forest benchmark model through Kaggle Scripts
+
+You are provided hourly rental data spanning two years. For this competition, the training set is comprised of the first 19 days of each month, while the test set is the 20th to the end of the month. You must predict the total count of bikes rented during each hour covered by the test set, using only information available prior to the rental period.
+
+Data Fields
+datetime - hourly date + timestamp  
+season -  1 = spring, 2 = summer, 3 = fall, 4 = winter 
+holiday - whether the day is considered a holiday
+workingday - whether the day is neither a weekend nor holiday
+weather - 1: Clear, Few clouds, Partly cloudy, Partly cloudy 
+                2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist 
+                3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds 
+                4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog 
+temp - temperature in Celsius
+atemp - "feels like" temperature in Celsius
+humidity - relative humidity
+windspeed - wind speed
+casual - number of non-registered user rentals initiated
+registered - number of registered user rentals initiated
+count - number of total rentals
+
+变量说明
+datetime（日期） - hourly date + timestamp
+season（季节） - 1 = spring, 2 = summer, 3 = fall, 4 = winter
+holiday（是否假日） - whether the day is considered a holiday
+workingday（是否工作日） - whether the day is neither a weekend nor holiday
+weather（天气等级） - （1）: Clear, Few clouds, Partly cloudy 清澈，少云，多云。
+（2）: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist 雾+阴天，雾+碎云、雾+少云、雾
+（3）: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds 小雪、小雨+雷暴+散云，小雨+云
+（4）: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog 暴雨+冰雹+雷暴+雾，雪+雾
+temp（温度） - temperature in Celsius
+atemp（体感温度） - "feels like" temperature in Celsius
+humidity（相对湿度） - relative humidity
+windspeed（风速） - wind speed
+casual（临时租赁数量） - number of non-registered user rentals initiated
+registered（会员租赁数量） - number of registered user rentals initiated
+count（总租赁数量） - number of total rentals
