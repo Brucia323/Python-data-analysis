@@ -37,14 +37,22 @@ def box_plot_outliers(data_ser, box_scale):
 
 scale = 3
 rule, value = box_plot_outliers(kobe['shot_distance'], box_scale=scale)
-kobe=kobe.reset_index(drop=True)
-index=arange(kobe['shot_distance'].shape[0])[rule[0]|rule[1]]
-kobe=kobe.drop(index)
+kobe = kobe.reset_index(drop=True)
+index = arange(kobe['shot_distance'].shape[0])[rule[0] | rule[1]]
+kobe = kobe.drop(index)
 # In[7]:
-kobe=kobe.fillna(method='pad')
+kobe = kobe.fillna(method='pad')
 # In[8]:
 print(kobe.corr())
 # In[9]:
 plot((kobe['loc_x'], kobe['loc_y']), (kobe['lat'], kobe['lon']), '.')
 show()
 # In[10]:
+period = kobe.groupby(['game_id', 'period'])['shot_made_flag'].sum()
+period = period.groupby(['game_id']).mean()
+period = period.mean()
+print(period)
+location = kobe.groupby(['loc_x', 'loc_y'])['shot_made_flag'].mean()
+print(location)
+action_type = kobe.groupby(['action_type'])['shot_made_flag'].mean()
+print(action_type)
