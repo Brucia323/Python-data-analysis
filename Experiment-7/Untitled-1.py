@@ -46,6 +46,5 @@ kobe=kobe.fillna(method='pad')
 print(kobe.corr())
 # In[9]:
 plot((kobe['loc_x'], kobe['loc_y']), (kobe['lat'], kobe['lon']), '.')
-# plot(kobe['lat'], kobe['lon'],'.')
 show()
 # In[10]:
