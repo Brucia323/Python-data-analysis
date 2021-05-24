@@ -1,9 +1,8 @@
+import matplotlib.pyplot as plt
 import numpy as np
 from numpy import isnan, nan, random, where
 from numpy.core.fromnumeric import size, std
 from numpy.lib.function_base import median
-import matplotlib.pyplot as plt
-
 
 datas3 = np.loadtxt('iris.csv', delimiter=",",
                     skiprows=1, usecols=[0, 1, 2, 3])
