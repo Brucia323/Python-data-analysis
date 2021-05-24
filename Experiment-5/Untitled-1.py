@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy.lib import math
+
 x = np.linspace(0, 2*math.pi)  # 在指定的间隔内返回均匀间隔的数字。
 plt.subplot(221)
 plt.plot(x, np.sin(x))  # sin
