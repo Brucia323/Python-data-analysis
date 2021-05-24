@@ -1,8 +1,10 @@
 # In[0]:
 from datetime import datetime
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from pandas.core.reshape.concat import concat
+
 plt.rcParams['font.sans-serif'] = ['simhei']
 # In[1]:
 train = pd.read_csv("./bike/train.csv", sep=",", encoding='utf8')
