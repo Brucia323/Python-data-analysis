@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+
 data = np.loadtxt('1980_2016_retrieved_TCsize_2Pub_v2.csv',
                   delimiter=',', skiprows=1, usecols=[0, 1, 2, 3, 4, 5])
 dataT = data.T
