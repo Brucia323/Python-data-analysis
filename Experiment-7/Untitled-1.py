@@ -4,7 +4,6 @@ from numpy import arange
 from pandas.core.tools.datetimes import to_datetime
 from pandas.io.parsers import read_csv
 
-
 data = read_csv("data.csv")
 print(data)
 print(data.describe())
