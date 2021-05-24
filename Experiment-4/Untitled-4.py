@@ -1,4 +1,5 @@
 import numpy as np
+
 arr = np.arange(1000).reshape(100, 10)
 print(arr)
 arr1 = arr.T  # 转置
