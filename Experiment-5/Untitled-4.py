@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from numpy import arange
+
 plt.rcParams['font.sans-serif'] = ['simhei']
 title1 = ['18岁以下', '18-24岁', '25-34岁', '35-44岁', '45-54岁', '55岁及以上']
 title2 = ['男', '女']
