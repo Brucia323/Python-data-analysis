@@ -6,14 +6,14 @@ train = read_csv("train (2).csv")
 train2 = DataFrame()
 train2['product_id'] = train['product_id']
 train2['user_id'] = train['user_id']
-l2=list()
+l2 = list()
 for i in range(len(train2)):
-    l1=list()
-    id=train2['user_id'][i]
-    while(id==train2['user_id'][i]):
+    l1 = list()
+    id = train2['user_id'][i]
+    while(id == train2['user_id'][i]):
         l1.append(train2['product_id'][i])
-        i+=1
-        if(i==len(train2)):
+        i += 1
+        if(i == len(train2)):
             break
     l2.append(l1)
 # In[1]:
