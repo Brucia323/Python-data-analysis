@@ -1,4 +1,4 @@
-from matplotlib.pyplot import figure, plot, scatter, subplot, title
+from matplotlib.pyplot import figure, plot, scatter, show, subplot, title
 from numpy import array, where
 from pandas.core.frame import DataFrame
 from pandas.io.parsers import read_csv
@@ -68,3 +68,4 @@ for j, y_ in enumerate([y, y_pred]):
             plot(centers[i-1][0], centers[i-1][1], 'o',
                  markerfacecolor=colors[i-1], markeredgecolor='k', markersize=6)
         i += 1
+show()
