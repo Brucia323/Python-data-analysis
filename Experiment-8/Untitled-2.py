@@ -6,7 +6,11 @@ from sklearn import cluster, metrics
 
 data = read_csv("wine.data", names=['identifier', 'Alcohol', 'Malic acid', 'Ash', 'Alcalinity of ash', 'Magnesium', 'Total phenols', 'Flavanoids',
                 'Nonflavanoid phenols', 'Proanthocyanins', 'Color intensity', 'Hue', 'OD280/OD315 of diluted wines', 'Proline'])  # 酒精,苹果酸,灰,灰分的碱度,镁,总酚,黄酮类,非黄酮酚,原花青素,颜色强度,色调,稀释酒的OD280/OD315,脯氨酸
-y = array(data['identifier'])
+y = data['identifier']
+y = y.replace(1, 0)
+y = y.replace(2, 1)
+y = y.replace(3, 2)
+y = array(y)
 X = array(data.drop(['identifier'], axis=1))
 kmeans = cluster.KMeans(n_clusters=3)
 kmeans.fit(X)
@@ -55,17 +59,15 @@ for j, y_ in enumerate([y, y_pred]):
     subplot(1, 2, j+1)
     title(titles[j])
     # 循环读类别
-    i = 1
-    while(i <= 3):
+    for i in range(3):
         # 找到相同的索引
         index_sets = where(y_ == i)
         # 将相同类的数据划分为一个聚类子集
         cluster = X[index_sets]
         # 展示样本点
-        scatter(cluster[:, 0], cluster[:, 1], c=colors[i-1], marker='.')
+        scatter(cluster[:, 0], cluster[:, 1], c=colors[i], marker='.')
         if j == 1:
             # 簇中心
-            plot(centers[i-1][0], centers[i-1][1], 'o',
-                 markerfacecolor=colors[i-1], markeredgecolor='k', markersize=6)
-        i += 1
+            plot(centers[i][0], centers[i][1], 'o',
+                 markerfacecolor=colors[i], markeredgecolor='k', markersize=6)
 show()
