@@ -3,9 +3,12 @@ from pandas.core.frame import DataFrame
 from pandas.io.parsers import read_csv
 
 train = read_csv("train (2).csv")
+train = train[train['event_type'] == 'purchase']
 train2 = DataFrame()
 train2['product_id'] = train['product_id']
 train2['user_id'] = train['user_id']
+train2=train2.drop_duplicates()
+train2=train2.reset_index(drop=True)
 l2 = list()
 for i in range(len(train2)):
     l1 = list()
@@ -61,7 +64,6 @@ def generateResult(dataset, support):
         else:
             L2_tem.append(i)
     C3 = list()
-    C3_1 = set()
     for i in L2:
         for j in L2:
             length = len(i)
@@ -123,4 +125,9 @@ def calconfidence(itemset, dataset):
 
 generateResult(l2, 100)
 
+# In[2]:
+test=read_csv("test.csv")
+test2=DataFrame()
+test2['product_id'] = test['product_id']
+test2['user_id'] = test['user_id']
 # %%
