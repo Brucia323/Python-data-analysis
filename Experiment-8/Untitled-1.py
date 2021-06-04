@@ -130,4 +130,5 @@ test=read_csv("test.csv")
 test2=DataFrame()
 test2['product_id'] = test['product_id']
 test2['user_id'] = test['user_id']
+test2=test2.drop_duplicates()
 # %%
