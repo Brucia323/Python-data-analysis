@@ -66,6 +66,7 @@ for j, y_ in enumerate([y, y_pred]):
         cluster = X[index_sets]
         # 展示样本点
         scatter(cluster[:, 0], cluster[:, 1], c=colors[i], marker='.')
+        print(str(len(cluster))+" "+colors[i])
         if j == 1:
             # 簇中心
             plot(centers[i][0], centers[i][1], 'o',
