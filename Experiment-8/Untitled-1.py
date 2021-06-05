@@ -7,8 +7,8 @@ train = train[train['event_type'] == 'purchase']
 train2 = DataFrame()
 train2['product_id'] = train['product_id']
 train2['user_id'] = train['user_id']
-train2=train2.drop_duplicates()
-train2=train2.reset_index(drop=True)
+train2 = train2.drop_duplicates()
+train2 = train2.reset_index(drop=True)
 l2 = list()
 for i in range(len(train2)):
     l1 = list()
@@ -124,11 +124,3 @@ def calconfidence(itemset, dataset):
 
 
 generateResult(l2, 100)
-
-# In[2]:
-test=read_csv("test.csv")
-test2=DataFrame()
-test2['product_id'] = test['product_id']
-test2['user_id'] = test['user_id']
-test2=test2.drop_duplicates()
-# %%
