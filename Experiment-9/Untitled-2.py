@@ -1,5 +1,5 @@
 from pandas.io.parsers import read_csv
-from sklearn import naive_bayes
+from sklearn import naive_bayes, neighbors, svm
 
 breast_cancer_wisconsin = read_csv("breast-cancer-wisconsin.data", names=[
                                    '身份证号码', '半径', '纹理', '周长', '面积', '平滑度', '紧凑性', '凹度', '凹点', '对称性', '分形维数'])
@@ -11,3 +11,5 @@ bernoulli = naive_bayes.BernoulliNB()
 complement = naive_bayes.ComplementNB()
 categorical = naive_bayes.CategoricalNB()
 multinomial = naive_bayes.MultinomialNB()
+linearsvc=svm.LinearSVC()
+kneighborsClassifier=neighbors.KNeighborsClassifier()
