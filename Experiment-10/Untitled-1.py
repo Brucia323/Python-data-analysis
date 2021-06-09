@@ -1,6 +1,5 @@
-#In[0]:
 from matplotlib import rcParams
-from matplotlib.pyplot import bar, scatter, show, title
+from matplotlib.pyplot import bar, boxplot, scatter, show, title
 from pandas.core.frame import DataFrame
 from pandas.io.parsers import read_csv
 from sklearn import feature_extraction, tree
@@ -26,7 +25,6 @@ businessData['DeviceProtection'] = data['DeviceProtection']
 businessData['TechSupport'] = data['TechSupport']
 businessData['StreamingTV'] = data['StreamingTV']
 businessData['StreamingMovies'] = data['StreamingMovies']
-#In[1]:
 contractData = DataFrame()
 contractData['Contract'] = data['Contract']
 contractData['PaperlessBilling'] = data['PaperlessBilling']
@@ -62,6 +60,7 @@ decision1.fit(businessData2, target)
 decision2.fit(contractData2, target)
 print(decision1.score(businessData2, target))
 print(decision2.score(contractData2, target))
-monthlyCharges = contractData['MonthlyCharges']
-scatter(monthlyCharges, target)
+monthlyCharges = data[data['Churn'] == 'Yes']['MonthlyCharges']
+print(monthlyCharges.mean())
+boxplot(monthlyCharges)
 show()
