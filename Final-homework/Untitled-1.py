@@ -1,10 +1,11 @@
-from numpy import where
-from pandas.core.frame import DataFrame
-from sklearn.cluster import KMeans
-from pylab import mpl
-from matplotlib.pyplot import bar, figure, legend, pie, plot, scatter, show, subplot, title
 from datetime import datetime
+
+from matplotlib.pyplot import bar, legend, pie, plot, show, title
 from pandas import read_csv, to_datetime
+from pandas.core.frame import DataFrame
+from pylab import mpl
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
 
 data1 = read_csv("data1.csv", encoding='GB18030')
 data2 = read_csv("data2.csv", encoding='GB18030')
@@ -50,10 +51,19 @@ pie(data5.groupby('部门')['消费金额'].sum(), labels=[
     '第一食堂', '第三食堂', '第二食堂', '第五食堂', '第四食堂'])
 show()
 data6 = DataFrame()
-data6 = data4.groupby('卡号')['消费金额', '结余'].sum()
+data6['消费金额'] = data4.groupby('卡号')['消费金额'].sum()
+data6['结余'] = data4.groupby('卡号')['结余'].mean()
 data7 = DataFrame()
 data7['卡号'] = data4['卡号'].drop_duplicates()
 n_clusters = 3
+while(n_clusters < 6):
+    k = KMeans(n_clusters=n_clusters)
+    k.fit(data6)
+    y_pred = k.predict(data6)
+    print("when n_cluster = ", n_clusters)
+    print("The silhouette_score = ", silhouette_score(data6, y_pred))
+    n_clusters += 1
+n_clusters = 4
 k = KMeans(n_clusters=n_clusters)
 k.fit(data6)
 y_pred = k.predict(data6)
