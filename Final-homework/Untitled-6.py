@@ -1,9 +1,9 @@
-from matplotlib.pyplot import scatter, show
-from pandas import DataFrame
 from re import match, split
 from urllib.request import Request, urlopen
 
 from bs4 import BeautifulSoup
+from matplotlib.pyplot import bar, legend, plot, show, title
+from pylab import mpl
 
 xm = urlopen('https://www.mi.com/').read()
 xmsoup = BeautifulSoup(xm, "lxml")
@@ -25,7 +25,7 @@ jdALL = split(r'<i>|</i>', str(jdall))
 jdprice = []
 i = 1
 while(i < len(jdALL)):
-    jdprice.append(jdALL[i])
+    jdprice.append(float(jdALL[i]))
     i += 2
 jdall = jdsoup.find_all(class_='p-shop')
 jdALL = split(
@@ -34,12 +34,31 @@ jdreputation = []
 jdscore = []
 i = 1
 while(i < len(jdALL)):
-    jdreputation.append(jdALL[i])
+    try:
+        jdreputation.append(float(jdALL[i]))
+    except:
+        jdreputation.append(0)
     i += 1
-    jdscore.append(jdALL[i])
+    jdscore.append(float(jdALL[i]))
     i += 2
-price = DataFrame()
-price['京东'] = jdprice
-price['小米'] = xmprice
-scatter(price)
+mpl.rcParams['font.sans-serif'] = ['simhei']
+plot(range(len(jdprice)), jdprice, '.', label='京东价格')
+plot([0, len(jdprice)], [float(xmprice), float(xmprice)], label='官方价格')
+legend()
+title('价格')
 show()
+bar(range(len(jdreputation)), jdreputation)
+title('评分')
+show()
+bar(range(len(jdscore)), jdscore)
+title('销量')
+show()
+sum = 0
+for i in jdscore:
+    sum += i
+print('销量：', sum)
+avg = 0
+for i in jdreputation:
+    avg += i
+avg /= len(jdreputation)
+print('评分：', avg)
