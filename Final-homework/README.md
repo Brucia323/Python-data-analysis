@@ -2,11 +2,11 @@
 
 1-4人一组，每组根据需要选择题目进行分析。若题目相同，不可内容和结果完全相同。每题最多3组。
 
-### 要求：
+### 要求
 
--   答辩才有成绩
+- 答辩才有成绩
 
--   小组：
+- 小组：
 
 （1）提交源代码
 
@@ -14,7 +14,7 @@
 
 （3）提交系统分析文档：包含分析思路、过程（实验设计，不同分析的结果比较），分析结果。在文档中谁做了什么要标记出来。
 
--   个人：总结
+- 个人：总结
 
 ## 题目1 学生校园消费行为分析
 
@@ -40,7 +40,7 @@
 
 ## 题目2 游客目的地印象分析
 
-### 一、问题背景 
+### 一、问题背景
 
 提升景区及酒店等旅游目的地美誉度是各地文旅主管部门和旅游相关企业非常重视和关注的工作，涉及到如何稳定客源、取得竞争优势、吸引游客到访消费等重要事项。游客满意度与目的地美誉度紧密相关，游客满意度越高，目的地美誉度就越大。因此掌握目的地游客满意度的影响因素，切实提高游客满意度、最终提升目的地美誉度，不仅能够保证客源稳定，而且对于旅游企业科学监管、资源优化配置以及市场持续开拓具有长远而积极的作用。
 
@@ -144,7 +144,7 @@ CivilEngg：AMCAT的"土木工程"部分中的得分
 
 ### 二、目标
 
-1.  通过数据分析来发现决定工程师毕业后马上提供的薪水和工作的主要因素。
+1. 通过数据分析来发现决定工程师毕业后马上提供的薪水和工作的主要因素。
 
 > 例如：大学的成绩，候选人的技能，大学与工业中心的接近程度，拥有的专业化程度，特定行业的市场条件
 
@@ -156,27 +156,27 @@ CivilEngg：AMCAT的"土木工程"部分中的得分
 
 国家《第十四个五年规划和 2035 年远景目标纲要》中提出，将 2030 年实现"碳达峰"与 2060 年实现"碳中和"作为我国应对全球气候变暖的一个重要远景目标。光伏建筑一体化(BIPV)是充分利用工业建筑、公共建筑屋顶等资源实施分布式光伏发电工程，它对我国实现"碳达峰"和"碳中和"起到重要作用。目前已有北京、天津、上海、重庆、内蒙古、浙江等 31 地发布光伏建筑一体化未来三至五年相关政策，这将对光伏建筑一体化相关上市企业的发展带来一定影响。在股票交易软件中，每支股票都有日 K 线（由开盘价、收盘线、最高价、最低价构成），还有移动平均线（5 日、10 日、20 日等），通过对日 K 线和移动平均线的分析，可知每支股票的走势。股票市场中有板块指数（将同一板块的个股按不同的权重方式生成相关指数），它是对该板块走势的整体反映。现统计沪深股市中 37 家光伏建筑一体化相关企业的股票数据（见附件 1）， 将这 37 家企业股票看作一个整体称为光伏建筑一体化板块。光伏建筑一体化板块作为新兴板块，通过对板块指数发展趋势做出预测，可以了解板块相应行业未来的发展趋势。
 
-### 二、目标：
+### 二、目标
 
 > 请根据所给数据资料，解决以下问题：
 
-1.  利用附件 1 中数据，给出光伏建筑一体化板块指数的移动平均线（5 日、10 日、20 日等）模型，并绘制 2019 年 4 月 1 日至 2021 年 4 月 30 日该板块指数的移动平均线。
+1. 利用附件 1 中数据，给出光伏建筑一体化板块指数的移动平均线（5 日、10 日、20 日等）模型，并绘制 2019 年 4 月 1 日至 2021 年 4 月 30 日该板块指数的移动平均线。
 
-2.  利用 2021 年 5 月 6 日至 5 月 28 日数据，对所建立模型进行误差分析并修正模型，根据修正后的模型对该板块未来发展趋势做出预测，给出 5 月 28 日后20 个交易日的日移动平均线、周的周移动平均线、2 个月的月移动平均线。
+2. 利用 2021 年 5 月 6 日至 5 月 28 日数据，对所建立模型进行误差分析并修正模型，根据修正后的模型对该板块未来发展趋势做出预测，给出 5 月 28 日后20 个交易日的日移动平均线、周的周移动平均线、2 个月的月移动平均线。
 
-3.  利用 2019 年 4 月 1 日至 2021 年 5 月 28 日数据，以 2 个月为一个时间段， 对上证指数和光伏建筑一体化板块指数进行相关性分析。
+3. 利用 2019 年 4 月 1 日至 2021 年 5 月 28 日数据，以 2 个月为一个时间段， 对上证指数和光伏建筑一体化板块指数进行相关性分析。
 
-4.  对光伏建筑一体化板块个股投资风险进行评估，给出该板块 37 支股票2021 年 6 月份投资风险由低到高的排序结果。假定投资者持有资金 100 万元人民币，欲全部用于该板块的投资，请给出 2021 年 6 月份的最优投资方案（当日可用于投资的资金为上一个交易日结束后投资者所持有的资金，且每日持股数不超过 5 支）。
+4. 对光伏建筑一体化板块个股投资风险进行评估，给出该板块 37 支股票2021 年 6 月份投资风险由低到高的排序结果。假定投资者持有资金 100 万元人民币，欲全部用于该板块的投资，请给出 2021 年 6 月份的最优投资方案（当日可用于投资的资金为上一个交易日结束后投资者所持有的资金，且每日持股数不超过 5 支）。
 
-5.  请给相关部门写一份不少于 1500 字关于我国光伏建筑一体化行业未来发展趋势的报告。
+5. 请给相关部门写一份不少于 1500 字关于我国光伏建筑一体化行业未来发展趋势的报告。
 
 > 附件 1：沪深股市中 37 家光伏建筑一体化相关企业的股票数据
 >
-> 附件 2：http://www.csindex.com.cn/zh-CN/indices/index-rules 中证指数有限公司
+> 附件 2：<http://www.csindex.com.cn/zh-CN/indices/index-rules> 中证指数有限公司
 
 ## 题目5 2022年世界杯冠军预测
 
-### 问题背景：
+### 问题背景
 
 国际足联世界杯（FIFA World Cup）简称"世界杯"，是世界上最高荣誉、最高规格、最高竞技水平、最高知名度的足球比赛，与奥运会并称为全球体育两大最顶级赛事，影响力和转播覆盖率超过奥运会的全球最大体育盛事。数据来源
 
@@ -186,29 +186,29 @@ CivilEngg：AMCAT的"土木工程"部分中的得分
 
 下面的数据是另外可以参考的数据
 
-https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017
+<https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017>
 
 This dataset includes 42,105 results of international football matches starting from the very first official match in 1972 up to 2019. The matches range from FIFA World Cup to FIFI Wild Cup to regular friendly matches. The matches are strictly men\'s full internationals and the data does not include Olympic Games or matches where at least one of the teams was the nation\'s B-team, U-23 or a league select team.
 
 results.csv includes the following columns:
 
--   date - date of the match
+- date - date of the match
 
--   home_team - the name of the home team
+- home_team - the name of the home team
 
--   away_team - the name of the away team
+- away_team - the name of the away team
 
--   home_score - full-time home team score including extra time, not including penalty-shootouts
+- home_score - full-time home team score including extra time, not including penalty-shootouts
 
--   away_score - full-time away team score including extra time, not including penalty-shootouts
+- away_score - full-time away team score including extra time, not including penalty-shootouts
 
--   tournament - the name of the tournament
+- tournament - the name of the tournament
 
--   city - the name of the city/town/administrative unit where the match was played
+- city - the name of the city/town/administrative unit where the match was played
 
--   country - the name of the country where the match was played
+- country - the name of the country where the match was played
 
--   neutral - TRUE/FALSE column indicating whether the match was played at a neutral venue
+- neutral - TRUE/FALSE column indicating whether the match was played at a neutral venue
 
 ================================================================
 
@@ -220,17 +220,17 @@ results.csv includes the following columns:
 
 ## 题目6 商品比价分析
 
-### 背景：
+### 背景
 
 同一件商品在不同的平台上价格不同，在同一平台上不同店铺价格也不同
 
 ### 目标
 
-1.  爬取同一件商品的平台/店铺的价格、评分、评价等内容
+1. 爬取同一件商品的平台/店铺的价格、评分、评价等内容
 
-2.  分析爬取结果，可视化显示
+2. 分析爬取结果，可视化显示
 
-3.  给出结论
+3. 给出结论
 
 ## 题目7 微博"\#党史\#"话题分析
 
