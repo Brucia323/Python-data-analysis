@@ -2,17 +2,17 @@ from re import search, split, sub
 from urllib.request import Request, urlopen
 
 from bs4 import BeautifulSoup
-from matplotlib.pyplot import bar, legend, plot, show, title
+from matplotlib.pyplot import bar, scatter, show, title
 from pylab import mpl
 
-xm = urlopen('https://www.mi.com/').read()
-xmsoup = BeautifulSoup(xm, "lxml")
-xmall = xmsoup.find_all(class_=['title', 'price'])
-xmALL = split(
-    r'</p>, <div class="title">|</div>, <p class="price">|<div class="title">', str(xmall))
-for i in range(len(xmALL)):
-    if(xmALL[i] == '小米11'):
-        mi11price = search(r'\d*', xmALL[i+1]).group()
+# xm = urlopen('https://www.mi.com/').read()
+# xmsoup = BeautifulSoup(xm, "lxml")
+# xmall = xmsoup.find_all(class_=['title', 'price'])
+# xmALL = split(
+#     r'</p>, <div class="title">|</div>, <p class="price">|<div class="title">', str(xmall))
+# for i in range(len(xmALL)):
+#     if(xmALL[i] == '小米11'):
+#         mi11price = search(r'\d*', xmALL[i+1]).group()
 header = {
     'user-agent': r'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Mobile Safari/537.36 Edg/91.0.864.41'}
 requests = Request(
@@ -134,11 +134,23 @@ while(i < len(jsall)):
 for i in range(len(sales)):
     sales[i] = sub('万', '0000', sales[i])
     sales[i] = sub('\+', '', sales[i])
+    sales[i] = int(sales[i])
 
 mpl.rcParams['font.sans-serif'] = ['simhei']
-bar(shopname,jdprice)
-title('价格')
-show()
-bar(sales,shopname)
+bar(shopname, sales)
 title('销量')
 show()
+scatter(shopname, jdprice)
+title('价格')
+show()
+
+maxIndex = 0
+for i in range(len(sales)):
+    if(sales[i] > sales[maxIndex]):
+        maxIndex = i
+max = jdprice[maxIndex]
+print(jdprice[maxIndex])
+print(shopname[maxIndex])
+jdprice.sort()
+print(jdprice.index(max))
+print('最低价格：', jdprice[0])
