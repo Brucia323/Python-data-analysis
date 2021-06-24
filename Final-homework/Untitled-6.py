@@ -5,14 +5,6 @@ from bs4 import BeautifulSoup
 from matplotlib.pyplot import bar, scatter, show, title
 from pylab import mpl
 
-# xm = urlopen('https://www.mi.com/').read()
-# xmsoup = BeautifulSoup(xm, "lxml")
-# xmall = xmsoup.find_all(class_=['title', 'price'])
-# xmALL = split(
-#     r'</p>, <div class="title">|</div>, <p class="price">|<div class="title">', str(xmall))
-# for i in range(len(xmALL)):
-#     if(xmALL[i] == '小米11'):
-#         mi11price = search(r'\d*', xmALL[i+1]).group()
 header = {
     'user-agent': r'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Mobile Safari/537.36 Edg/91.0.864.41'}
 requests = Request(
